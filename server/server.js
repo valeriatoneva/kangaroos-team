@@ -8,7 +8,7 @@ const carRoutes = require('./routes/car');
 connectDB(); // Call the connectDB function to establish the database connection
 
 app.get('/', (req, res) => {
-    res.send('Hello, World!');
+    res.send('Hello, World 2!');
 });
 
 app.use('/cars', carRoutes);

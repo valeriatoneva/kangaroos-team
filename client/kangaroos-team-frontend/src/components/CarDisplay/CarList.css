@@ -1,0 +1,7 @@
+/* Styling the CarList component */
+div {
+    padding: 20px;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    margin: 10px;
+}

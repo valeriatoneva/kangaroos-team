@@ -1,1 +1,22 @@
 node_modules
+
+# Ignore compiled and build artifacts
+/build/
+/dist/
+
+# Ignore IDE-specific directories
+/.idea/
+.vscode/
+
+# Ignore log files
+*.log
+
+# Ignore binary and media files
+*.exe
+*.dll
+*.jpg
+*.png
+
+# Ignore large dataset files
+*.csv
+*.json
