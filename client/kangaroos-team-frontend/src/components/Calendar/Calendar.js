@@ -17,14 +17,24 @@ function Calendar() {
   ];
 
   return (
-    <div style={{ height: '500px' }}>
+    <div className="calendar-container">
       <BigCalendar
         localizer={localizer}
         defaultDate={new Date()}
         defaultView="month"
         events={events}
-        style={{ height: '100%' }}
+        style={{ flex: 1 }}
       />
+
+      {/* Integrated HTML */}
+      <div className="e1_4332">
+        <div className="e101_2449"></div>
+        {/* ... Your provided HTML ... */}
+      </div>
+
+      <div className="e3_1488">
+        <div className="e3_1493"></div>
+      </div>
     </div>
   );
 }

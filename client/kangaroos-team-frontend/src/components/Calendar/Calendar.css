@@ -1,3 +1,18 @@
-.rbc-toolbar {
-    background-color: #f8f8f8;
-  }
+/* This will ensure the calendar takes the full available width and height */
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+/* If you have any headers or footers, you can adjust the height value above to account for them. */
+
+/* For the integrated HTML, ensure it doesn't overlap or push the calendar out */
+.e1_4332, .e3_1488 {
+    /* Adjust as necessary based on the design */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+}
