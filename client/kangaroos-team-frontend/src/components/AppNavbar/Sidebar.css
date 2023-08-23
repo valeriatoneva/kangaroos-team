@@ -1,42 +1,36 @@
-/* Sidebar.css */
-.nav-links {
-  list-style: none;
-  padding: 0;
+.sidebar {
+  width: 280px;
+  background-color: #202124;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
 }
 
-.nav-links li {
-  margin-bottom: 10px;
-}
-
-/* Style the links to look like buttons */
-.nav-links li a {
-  display: block;
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-/* Add hover effect */
-.nav-links li a:hover {
-  background-color: #555;
-}
-
-/* Style the logo */
 .logo {
   font-size: 24px;
   font-weight: bold;
-  color: #333;
   margin-bottom: 20px;
-  text-align: center; /* Center align the text */
 }
 
-.logo div {
-  display: block; /* Display the div elements as blocks */
+.nav-links {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  text-align: center;
 }
 
-.logo div:nth-child(1) {
-  margin-bottom: 5px; /* Add margin between the two divs */
+.nav-links li {
+  margin-bottom: 15px;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links li a:hover {
+  color: #ff6347;
 }
