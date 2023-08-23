@@ -1,28 +1,31 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
-import './App.css';
-import Home from './components/HomePage/Home';
-// import CarList from './components/CarDisplay/CarList';
-import Sidebar from './components/AppNavbar/Sidebar';
-import Calendar from './components/Calendar/Calendar';
-import CarHistory from './components/CarHistory/History';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import React, { useState, useContext, useEffect } from "react";
+import "./App.css";
+import { getMonth } from "./util";
+import CalendarHeader from "./components/CalendarHeader";
+import Sidebar from "./components/Sidebar";
+import Month from "./components/Month";
+import GlobalContext from "./context/GlobalContext";
+import EventModal from "./components/EventModal";
 function App() {
+  const [currenMonth, setCurrentMonth] = useState(getMonth());
+  const { monthIndex, showEventModal } = useContext(GlobalContext);
+
+  useEffect(() => {
+    setCurrentMonth(getMonth(monthIndex));
+  }, [monthIndex]);
+
   return (
-    <Router>
-      <div className="App">
-        <Sidebar />
-        <div className="main-content body-pd" id="body-pd"> {/* Added class and id to align with the Sidebar's JS */}
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/calendar" element={<Calendar />} />
-            <Route path="/history" element={<CarHistory />} />
-          </Routes>
+    <React.Fragment>
+      {showEventModal && <EventModal />}
+
+      <div className="h-screen flex flex-col">
+        <CalendarHeader />
+        <div className="flex flex-1">
+          <Sidebar />
+          <Month month={currenMonth} />
         </div>
       </div>
-    </Router>
+    </React.Fragment>
   );
 }
 
